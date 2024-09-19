@@ -1,0 +1,104 @@
+.header {
+    /* height: 10vh;
+    line-height: 10vh; */
+    background-color: var(--headingColor);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    /* padding: 10px 0px; */
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header a {
+    padding: 10px 15px;
+    position: relative;
+}
+
+.header a::after {
+    content: "";
+    width: 0px;
+    height: 2px;
+    background-color: var(--primaryColor);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .5s;
+}
+
+.header a:hover::after {
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.heddin {
+    display: none;
+}
+
+.menue {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* max-width:768px */
+@media screen and (max-width:850px) {
+    .nav {
+        display: none;
+    }
+
+    .heddin {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* position: absolute;
+        top: 100%;
+        left: 0; */
+        position: fixed;
+        top: 74px;
+        left: 0px;
+        background-color: var(--headingColor);
+        padding: 10px 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        overflow: hidden;
+    }
+
+    .navBar {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--headingColor);
+        padding: 0 10px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        overflow: hidden;
+    }
+
+    .header a {
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .menue {
+        display: block;
+    }
+
+}
