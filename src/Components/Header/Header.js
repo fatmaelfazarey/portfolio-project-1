@@ -12,7 +12,7 @@ export default function Header() {
     const [responsive, setResponsive] = useState(false);
     const navLink = [
         {
-            url: '/home',
+            url: '/',
             text: 'Home',
         },
         {
