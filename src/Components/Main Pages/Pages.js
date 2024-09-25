@@ -21,14 +21,15 @@ export default function Pages() {
                 <ScrollToTop />
                 <Header />
                 <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Route exact path='/about' component={About} />
-                    <Route exact path='/services' component={Services} />
-                    <Route exact path="/counter" component={Counter} />
-                    <Route exact path="/portfolio" component={Portfolio} />
-                    <Route exact path="/testimonials" component={Testimonials} />
-                    <Route exact path="/blog" component={Blog} />
-                    <Route exact path="/contact" component={Contact} />
+                    <Route  path='/' component={Home} />
+                    <Route  path='/about' component={About} />
+                    <Route  path='/services' component={Services} />
+                    <Route  path="/counter" component={Counter} />
+                    <Route  path="/portfolio" component={Portfolio} />
+                    <Route  path="/testimonials" component={Testimonials} />
+                    <Route  path="/blog" component={Blog} />
+                    <Route  path="/contact" component={Contact} />
+                    {/* exact */}
                 </Switch>
                 <Footer />
             </Router>
