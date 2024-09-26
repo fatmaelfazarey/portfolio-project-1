@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import Header from "../Header/Header";
 import Home from './Home';
@@ -20,13 +20,13 @@ export default function Pages() {
                 <Header />
                 <Switch>
                     <Route exact path='/' component={Home} />
-                    <Route  path='/about' component={About} />
-                    <Route  path='/services' component={Services} />
-                    <Route  path="/counter" component={Counter} />
-                    <Route  path="/portfolio" component={Portfolio} />
-                    <Route  path="/testimonials" component={Testimonials} />
-                    <Route  path="/blog" component={Blog} />
-                    <Route  path="/contact" component={Contact} />
+                    <Route exact path='/about' component={About} />
+                    <Route exact path='/services' component={Services} />
+                    <Route exact path="/counter" component={Counter} />
+                    <Route exact path="/portfolio" component={Portfolio} />
+                    <Route exact path="/testimonials" component={Testimonials} />
+                    <Route exact path="/blog" component={Blog} />
+                    <Route exact path="/contact" component={Contact} />
                 </Switch>
                 <Footer />
             </Router>
