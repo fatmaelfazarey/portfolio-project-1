@@ -13,15 +13,13 @@ import Footer from '../Footer/Footer';
 import ScrollToTop from "../ScrollToTop";
 
 export default function Pages() {
-
-
     return (
         <>
             <Router>
                 <ScrollToTop />
                 <Header />
                 <Switch>
-                    <Route path='/' component={Home} />
+                    <Route exact path='/' component={Home} />
                     <Route exact path='/about' component={About} />
                     <Route exact path='/services' component={Services} />
                     <Route exact path="/counter" component={Counter} />
@@ -29,11 +27,9 @@ export default function Pages() {
                     <Route exact path="/testimonials" component={Testimonials} />
                     <Route exact path="/blog" component={Blog} />
                     <Route exact path="/contact" component={Contact} />
-                    {/* exact */}
                 </Switch>
                 <Footer />
             </Router>
         </>
     )
-
 }
