@@ -19,14 +19,15 @@ export default function Pages() {
                 <ScrollToTop />
                 <Header />
                 <Switch>
-                    <Route  path='/' component={Home} />
+
                     <Route exact path='/about' component={About} />
                     <Route exact path='/services' component={Services} />
-                    <Route exact path="/counter" component={Counter} />
+                    <Route exact path='/counter' component={Counter} />
                     <Route exact path="/portfolio" component={Portfolio} />
                     <Route exact path="/testimonials" component={Testimonials} />
                     <Route exact path="/blog" component={Blog} />
                     <Route exact path="/contact" component={Contact} />
+                    <Route component={Home} />
                 </Switch>
                 <Footer />
             </Router>
