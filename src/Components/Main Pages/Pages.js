@@ -17,7 +17,7 @@ import Layout from "../Layout/Layout";
 export default function Pages() {
     const router = createBrowserRouter([
         {
-            path: "/portfolio-project-1",
+            path: "/",
             element: <Layout />,
             children: [
                 { index: true, element: <Home /> },
