@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import Header from "../Header/Header";
 import Home from './Home';
@@ -18,17 +19,16 @@ export default function Pages() {
             <Router>
                 <ScrollToTop />
                 <Header />
-                <Switch>
-
-                    <Route exact path='/about' component={About} />
-                    <Route exact path='/services' component={Services} />
-                    <Route exact path='/counter' component={Counter} />
-                    <Route exact path="/portfolio" component={Portfolio} />
-                    <Route exact path="/testimonials" component={Testimonials} />
-                    <Route exact path="/blog" component={Blog} />
-                    <Route exact path="/contact" component={Contact} />
-                    <Route component={Home} />
-                </Switch>
+                <Routes>
+                    <Route exact path='/' element={Home} />
+                    <Route exact path='/about' element={About} />
+                    <Route exact path='/services' element={Services} />
+                    <Route exact path='/counter' element={Counter} />
+                    <Route exact path="/portfolio" element={Portfolio} />
+                    <Route exact path="/testimonials" element={Testimonials} />
+                    <Route exact path="/blog" element={Blog} />
+                    <Route exact path="/contact" element={Contact} />
+                </Routes>
                 <Footer />
             </Router>
         </>
