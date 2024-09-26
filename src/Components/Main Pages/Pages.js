@@ -22,11 +22,11 @@ export default function Pages() {
             children: [
                 { index: true, element: <Home /> },
                 {
-                    path: "/portfolio-project-1/home",
+                    path: "/portfolio-project-1",
                     element: <Home />,
                 },
                 {
-                    path: "/about",
+                    path: "/portfolio-project-1/about",
                     element: <About />,
                 },
                 {
