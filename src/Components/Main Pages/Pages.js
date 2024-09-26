@@ -1,36 +1,64 @@
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import Header from "../Header/Header";
-import Home from './Home';
+import Home from "./Home";
 import About from "../About/About";
 import Services from "../Services/Services";
 import Counter from "../Counter/Counter";
 import Portfolio from "../Portfolio/Portfolio";
 import Testimonials from "../Testimonials/Testimonials";
 import Blog from "../Blog/Blog";
-import Contact from '../Contact/Contact';
-import Footer from '../Footer/Footer';
+import Contact from "../Contact/Contact";
+import Footer from "../Footer/Footer";
 import ScrollToTop from "../ScrollToTop";
+import Layout from "../Layout/Layout";
 
 export default function Pages() {
+    const router = createBrowserRouter([
+        {
+            path: "/",
+            element: <Layout />,
+            children: [
+                { index: true, element: <Home /> },
+                {
+                    path: "/portfolio-project-1",
+                    element: <Home />,
+                },
+                {
+                    path: "/about",
+                    element: <About />,
+                },
+                {
+                    path: "/services",
+                    element: <Services />,
+                },
+                {
+                    path: "/counter",
+                    element: <Counter />,
+                },
+                {
+                    path: "/portfolio",
+                    element: <Portfolio />,
+                },
+                {
+                    path: "/testimonials",
+                    element: <Testimonials />,
+                },
+                {
+                    path: "/blog",
+                    element: <Blog />,
+                },
+                {
+                    path: "/contact",
+                    element: <Contact />,
+                },
+            ],
+        },
+    ]);
     return (
         <>
-            <Router>
-                <ScrollToTop />
-                <Header />
-                <Routes>
-                    <Route exact path='/' element={Home} />
-                    <Route exact path='/about' element={About} />
-                    <Route exact path='/services' element={Services} />
-                    <Route exact path='/counter' element={Counter} />
-                    <Route exact path="/portfolio" element={Portfolio} />
-                    <Route exact path="/testimonials" element={Testimonials} />
-                    <Route exact path="/blog" element={Blog} />
-                    <Route exact path="/contact" element={Contact} />
-                </Routes>
-                <Footer />
-            </Router>
+            <RouterProvider router={router} />
         </>
-    )
+    );
 }
