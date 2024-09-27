@@ -22,17 +22,13 @@ export default function Pages() {
             element: <Layout />,
             children: [
                 { index: true, element: <Home /> },
-                {
-                    path: "/",
-                    element: <Header />,
-
-                },
+              
                 {
                     path: "/portfolio-project-1",
                     element: <Home />,
                 },
                 {
-                    path: "/about",
+                    path: "/portfolio-project-1/about",
                     element: <About />,
                 },
                 {
