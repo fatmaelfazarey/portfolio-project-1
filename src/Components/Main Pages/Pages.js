@@ -17,11 +17,16 @@ import Layout from "../Layout/Layout";
 export default function Pages() {
     const router = createBrowserRouter([
         {
-            basename:'/portfolio-project-1',
+            basename: '/portfolio-project-1',
             path: "/",
             element: <Layout />,
             children: [
                 { index: true, element: <Home /> },
+                {
+                    path: "/",
+                    element: <Header />,
+
+                },
                 {
                     path: "/portfolio-project-1",
                     element: <Home />,
