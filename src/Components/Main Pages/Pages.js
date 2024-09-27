@@ -28,7 +28,7 @@ export default function Pages() {
                     element: <Home />,
                 },
                 {
-                    path: "/portfolio-project-1/about",
+                    path: "/about",
                     element: <About />,
                 },
                 {
